@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: fleetsense-urban-mobility
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true

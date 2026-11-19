@@ -1,0 +1,409 @@
+{
+  "n_stops": 374,
+  "n_features": 31,
+  "features": [
+    "log_footfall",
+    "morning_share",
+    "midday_share",
+    "afternoon_share",
+    "evening_share",
+    "night_share",
+    "am_peak_ratio",
+    "pm_peak_ratio",
+    "peak_to_base",
+    "temporal_entropy",
+    "night_activity",
+    "service_frequency",
+    "weekend_ratio",
+    "daily_volatility",
+    "morning_balance",
+    "dwell_mean_s",
+    "dwell_per_boarding",
+    "speed_mean_kmh",
+    "speed_consistency",
+    "occupancy_mean",
+    "capacity_utilization",
+    "schedule_delay_mean_s",
+    "delay_index",
+    "routes_served",
+    "footfall_per_route",
+    "ped_to_rider_ratio",
+    "two_wheeler_share",
+    "crowd_density",
+    "crowd_pressure",
+    "neighbour_demand_ratio",
+    "network_degree"
+  ],
+  "chosen_k": 8,
+  "silhouette": 0.5564,
+  "davies_bouldin": 0.7703,
+  "calinski_harabasz": 266.53,
+  "ari_kmeans_vs_ward": 0.9591,
+  "pca_variance_ratio": [
+    0.2638,
+    0.1717
+  ],
+  "pca2_variance_ratio": [
+    0.2638,
+    0.1717
+  ],
+  "pca_explained": [
+    0.2638,
+    0.1717,
+    0.1286,
+    0.099,
+    0.0707,
+    0.0428,
+    0.0338,
+    0.0305
+  ],
+  "pca_components": 8,
+  "pca2d_variance_explained": 0.4355,
+  "dbscan_eps": 1.0513,
+  "dbscan_outliers": 2,
+  "dbscan_noise_rate": 0.0053,
+  "isolation_forest_anomalies": 13,
+  "rhythm_k": 4,
+  "k_selection": [
+    {
+      "k": 3,
+      "inertia": 5040.306278307626,
+      "silhouette": 0.35925648712664476,
+      "davies_bouldin": 1.337046807997354,
+      "calinski_harabasz": 145.86765110288647
+    },
+    {
+      "k": 4,
+      "inertia": 3846.0560186609146,
+      "silhouette": 0.4260924308270812,
+      "davies_bouldin": 0.9902626225867632,
+      "calinski_harabasz": 165.39405776740628
+    },
+    {
+      "k": 5,
+      "inertia": 2659.673462863651,
+      "silhouette": 0.4976248945906614,
+      "davies_bouldin": 0.79605073864004,
+      "calinski_harabasz": 220.04222906470406
+    },
+    {
+      "k": 6,
+      "inertia": 2147.6474735240395,
+      "silhouette": 0.524114895463072,
+      "davies_bouldin": 0.8535571121458304,
+      "calinski_harabasz": 234.9588034699925
+    },
+    {
+      "k": 7,
+      "inertia": 1758.0121770904832,
+      "silhouette": 0.5337949617878006,
+      "davies_bouldin": 0.8272787315787876,
+      "calinski_harabasz": 252.1013501795279
+    },
+    {
+      "k": 8,
+      "inertia": 1476.9297836969617,
+      "silhouette": 0.5562740954359605,
+      "davies_bouldin": 0.7694183275338998,
+      "calinski_harabasz": 266.4614425865391
+    },
+    {
+      "k": 9,
+      "inertia": 1240.3757779227778,
+      "silhouette": 0.5574076101865267,
+      "davies_bouldin": 0.6885629907789762,
+      "calinski_harabasz": 285.5615747651718
+    },
+    {
+      "k": 10,
+      "inertia": 1117.534163754733,
+      "silhouette": 0.5664484102453783,
+      "davies_bouldin": 0.6526062331632405,
+      "calinski_harabasz": 285.40815388348346
+    },
+    {
+      "k": 11,
+      "inertia": 1017.3372543437783,
+      "silhouette": 0.5645243124658281,
+      "davies_bouldin": 0.6861550340097119,
+      "calinski_harabasz": 284.96602473115166
+    },
+    {
+      "k": 12,
+      "inertia": 901.424753803479,
+      "silhouette": 0.5589653345238654,
+      "davies_bouldin": 0.7069200697951056,
+      "calinski_harabasz": 295.798344707156
+    }
+  ],
+  "algorithms": {
+    "clustering": "KMeans",
+    "validation": "Ward agglomerative",
+    "density": "DBSCAN",
+    "anomaly": "Isolation Forest",
+    "rhythm": "KMeans on 24-dim curves",
+    "reduction": "StandardScaler -> PCA"
+  },
+  "feature_labels": {
+    "log_footfall": "Footfall volume (log)",
+    "morning_share": "Morning demand share",
+    "midday_share": "Midday demand share",
+    "afternoon_share": "Afternoon demand share",
+    "evening_share": "Evening demand share",
+    "night_share": "Night demand share",
+    "am_peak_ratio": "AM peak concentration",
+    "pm_peak_ratio": "PM peak concentration",
+    "peak_to_base": "Peak-to-median sharpness",
+    "temporal_entropy": "Temporal entropy",
+    "night_activity": "Night bus activity",
+    "service_frequency": "Bus calls per day",
+    "weekend_ratio": "Weekend / weekday ratio",
+    "daily_volatility": "Day-to-day volatility",
+    "morning_balance": "AM boarding balance",
+    "dwell_mean_s": "Mean dwell (s)",
+    "dwell_per_boarding": "Dwell per boarding (s)",
+    "speed_mean_kmh": "Approach speed (km/h)",
+    "speed_consistency": "Speed consistency",
+    "occupancy_mean": "Mean occupancy",
+    "capacity_utilization": "Capacity utilisation",
+    "schedule_delay_mean_s": "Schedule deviation (s)",
+    "delay_index": "Delay index",
+    "routes_served": "Routes served",
+    "footfall_per_route": "Footfall per route",
+    "ped_to_rider_ratio": "Pedestrian : rider ratio",
+    "two_wheeler_share": "Two-wheeler share",
+    "crowd_density": "Camera crowd density",
+    "crowd_pressure": "Crowd pressure",
+    "neighbour_demand_ratio": "Neighbour demand ratio",
+    "network_degree": "Network degree"
+  },
+  "feature_stats": {
+    "log_footfall": {
+      "mean": 7.2258,
+      "std": 1.0392,
+      "min": 4.2499,
+      "median": 7.2933,
+      "max": 9.2754
+    },
+    "morning_share": {
+      "mean": 0.2554,
+      "std": 0.1096,
+      "min": 0.0316,
+      "median": 0.3008,
+      "max": 0.4128
+    },
+    "midday_share": {
+      "mean": 0.2744,
+      "std": 0.1243,
+      "min": 0.1148,
+      "median": 0.2338,
+      "max": 0.5589
+    },
+    "afternoon_share": {
+      "mean": 0.2721,
+      "std": 0.1,
+      "min": 0.1082,
+      "median": 0.2412,
+      "max": 0.4799
+    },
+    "evening_share": {
+      "mean": 0.3115,
+      "std": 0.1244,
+      "min": 0.0266,
+      "median": 0.3423,
+      "max": 0.5492
+    },
+    "night_share": {
+      "mean": 0.1588,
+      "std": 0.1269,
+      "min": 0.0223,
+      "median": 0.0978,
+      "max": 0.5408
+    },
+    "am_peak_ratio": {
+      "mean": 0.2554,
+      "std": 0.1096,
+      "min": 0.0316,
+      "median": 0.3008,
+      "max": 0.4128
+    },
+    "pm_peak_ratio": {
+      "mean": 0.2887,
+      "std": 0.1384,
+      "min": 0.027,
+      "median": 0.3065,
+      "max": 0.6281
+    },
+    "peak_to_base": {
+      "mean": 5.1108,
+      "std": 2.7267,
+      "min": 1.964,
+      "median": 4.5477,
+      "max": 14.0
+    },
+    "temporal_entropy": {
+      "mean": 0.8453,
+      "std": 0.0331,
+      "min": 0.7687,
+      "median": 0.841,
+      "max": 0.9378
+    },
+    "night_activity": {
+      "mean": 0.1898,
+      "std": 0.1144,
+      "min": 0.0335,
+      "median": 0.142,
+      "max": 0.5083
+    },
+    "service_frequency": {
+      "mean": 12.4189,
+      "std": 6.2222,
+      "min": 6.0,
+      "median": 10.7,
+      "max": 46.3143
+    },
+    "weekend_ratio": {
+      "mean": 0.8617,
+      "std": 0.5467,
+      "min": 0.0903,
+      "median": 0.7374,
+      "max": 2.3418
+    },
+    "daily_volatility": {
+      "mean": 0.2131,
+      "std": 0.0442,
+      "min": 0.1164,
+      "median": 0.2113,
+      "max": 0.3488
+    },
+    "morning_balance": {
+      "mean": 0.2102,
+      "std": 0.3694,
+      "min": -0.5318,
+      "median": 0.1152,
+      "max": 0.5639
+    },
+    "dwell_mean_s": {
+      "mean": 33.6603,
+      "std": 10.0445,
+      "min": 15.8733,
+      "median": 30.8933,
+      "max": 70.0343
+    },
+    "dwell_per_boarding": {
+      "mean": 1.1068,
+      "std": 1.2478,
+      "min": 0.2907,
+      "median": 0.6788,
+      "max": 7.978
+    },
+    "speed_mean_kmh": {
+      "mean": 19.277,
+      "std": 7.1336,
+      "min": 8.8605,
+      "median": 17.8375,
+      "max": 43.849
+    },
+    "speed_consistency": {
+      "mean": 0.9267,
+      "std": 0.0269,
+      "min": 0.8166,
+      "median": 0.93,
+      "max": 0.981
+    },
+    "occupancy_mean": {
+      "mean": 25.94,
+      "std": 19.0969,
+      "min": 0.4215,
+      "median": 23.9532,
+      "max": 59.8054
+    },
+    "capacity_utilization": {
+      "mean": 0.4323,
+      "std": 0.3183,
+      "min": 0.007,
+      "median": 0.3992,
+      "max": 0.9968
+    },
+    "schedule_delay_mean_s": {
+      "mean": -0.0348,
+      "std": 5.3311,
+      "min": -17.7368,
+      "median": -0.0796,
+      "max": 15.0634
+    },
+    "delay_index": {
+      "mean": 0.0349,
+      "std": 0.0274,
+      "min": 0.0,
+      "median": 0.0301,
+      "max": 0.1478
+    },
+    "routes_served": {
+      "mean": 1.4385,
+      "std": 0.7888,
+      "min": 1.0,
+      "median": 1.0,
+      "max": 5.0
+    },
+    "footfall_per_route": {
+      "mean": 1632.6435,
+      "std": 1436.5419,
+      "min": 34.5486,
+      "median": 1231.1771,
+      "max": 6000.0
+    },
+    "ped_to_rider_ratio": {
+      "mean": 1.3952,
+      "std": 0.9703,
+      "min": 0.3535,
+      "median": 1.0451,
+      "max": 6.8115
+    },
+    "two_wheeler_share": {
+      "mean": 0.0119,
+      "std": 0.0033,
+      "min": 0.0062,
+      "median": 0.012,
+      "max": 0.0176
+    },
+    "crowd_density": {
+      "mean": 0.1185,
+      "std": 0.1162,
+      "min": 0.0029,
+      "median": 0.0759,
+      "max": 0.5916
+    },
+    "crowd_pressure": {
+      "mean": 0.2758,
+      "std": 0.5204,
+      "min": 0.0001,
+      "median": 0.0582,
+      "max": 3.0
+    },
+    "neighbour_demand_ratio": {
+      "mean": 1.4055,
+      "std": 2.0354,
+      "min": 0.05,
+      "median": 1.0,
+      "max": 20.0
+    },
+    "network_degree": {
+      "mean": 6.877,
+      "std": 4.8804,
+      "min": 1.0,
+      "median": 6.0,
+      "max": 20.0
+    }
+  },
+  "dbscan_min_samples": 6,
+  "dbscan_space": "first 3 principal components",
+  "iso_contamination": 0.06,
+  "kmeans_space": "first 6 principal components",
+  "n_panel_rows": 314160,
+  "n_source_events": 162564,
+  "n_rhythm_profiles": 374,
+  "train_seconds": 1.87,
+  "label_purity_mean": 0.9271,
+  "trained_at": "2026-11-19T15:05:06.794473+00:00"
+}

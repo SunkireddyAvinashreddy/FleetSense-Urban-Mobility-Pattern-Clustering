@@ -1,0 +1,265 @@
+{
+  "features": [
+    "log_footfall",
+    "morning_share",
+    "midday_share",
+    "afternoon_share",
+    "evening_share",
+    "night_share",
+    "am_peak_ratio",
+    "pm_peak_ratio",
+    "peak_to_base",
+    "temporal_entropy",
+    "night_activity",
+    "service_frequency",
+    "weekend_ratio",
+    "daily_volatility",
+    "morning_balance",
+    "dwell_mean_s",
+    "dwell_per_boarding",
+    "speed_mean_kmh",
+    "speed_consistency",
+    "occupancy_mean",
+    "capacity_utilization",
+    "schedule_delay_mean_s",
+    "delay_index",
+    "routes_served",
+    "footfall_per_route",
+    "ped_to_rider_ratio",
+    "two_wheeler_share",
+    "crowd_density",
+    "crowd_pressure",
+    "neighbour_demand_ratio",
+    "network_degree"
+  ],
+  "k": 8,
+  "feature_labels": {
+    "log_footfall": "Footfall volume (log)",
+    "morning_share": "Morning demand share",
+    "midday_share": "Midday demand share",
+    "afternoon_share": "Afternoon demand share",
+    "evening_share": "Evening demand share",
+    "night_share": "Night demand share",
+    "am_peak_ratio": "AM peak concentration",
+    "pm_peak_ratio": "PM peak concentration",
+    "peak_to_base": "Peak-to-median sharpness",
+    "temporal_entropy": "Temporal entropy",
+    "night_activity": "Night bus activity",
+    "service_frequency": "Bus calls per day",
+    "weekend_ratio": "Weekend / weekday ratio",
+    "daily_volatility": "Day-to-day volatility",
+    "morning_balance": "AM boarding balance",
+    "dwell_mean_s": "Mean dwell (s)",
+    "dwell_per_boarding": "Dwell per boarding (s)",
+    "speed_mean_kmh": "Approach speed (km/h)",
+    "speed_consistency": "Speed consistency",
+    "occupancy_mean": "Mean occupancy",
+    "capacity_utilization": "Capacity utilisation",
+    "schedule_delay_mean_s": "Schedule deviation (s)",
+    "delay_index": "Delay index",
+    "routes_served": "Routes served",
+    "footfall_per_route": "Footfall per route",
+    "ped_to_rider_ratio": "Pedestrian : rider ratio",
+    "two_wheeler_share": "Two-wheeler share",
+    "crowd_density": "Camera crowd density",
+    "crowd_pressure": "Crowd pressure",
+    "neighbour_demand_ratio": "Neighbour demand ratio",
+    "network_degree": "Network degree"
+  },
+  "algorithms": {
+    "clustering": "KMeans",
+    "validation": "Ward agglomerative",
+    "density": "DBSCAN",
+    "anomaly": "Isolation Forest",
+    "rhythm": "KMeans on 24-dim curves",
+    "reduction": "StandardScaler -> PCA"
+  },
+  "cluster_names": {
+    "0": "Shift-Work & Industrial",
+    "1": "Commuter Interchange Hub",
+    "2": "Residential Outbound Feeder",
+    "3": "Event & Leisure Venue",
+    "4": "Campus & College Zone",
+    "5": "Airport & Gateway Transit",
+    "6": "Low-Activity Peripheral",
+    "7": "Market & Retail Footfall"
+  },
+  "rhythm_names": {
+    "0": "Midday Plateau - 14h",
+    "1": "Evening Peak - 18h",
+    "2": "Late Night - 21h",
+    "3": "Midday Plateau - 15h"
+  },
+  "medians": {
+    "log_footfall": 7.293318883476421,
+    "morning_share": 0.30079370915253006,
+    "midday_share": 0.23382015555982893,
+    "afternoon_share": 0.24123622598234562,
+    "evening_share": 0.34225370106565234,
+    "night_share": 0.09776144304456334,
+    "am_peak_ratio": 0.30079370915253006,
+    "pm_peak_ratio": 0.3064947361489868,
+    "peak_to_base": 4.547709856387801,
+    "temporal_entropy": 0.8409791298863879,
+    "night_activity": 0.14195676586187536,
+    "service_frequency": 10.7,
+    "weekend_ratio": 0.7374305777906047,
+    "daily_volatility": 0.21128513460119008,
+    "morning_balance": 0.11522774919001334,
+    "dwell_mean_s": 30.893259582076205,
+    "dwell_per_boarding": 0.6787679943706872,
+    "speed_mean_kmh": 17.837542227113396,
+    "speed_consistency": 0.9299964162484505,
+    "occupancy_mean": 23.953239797602542,
+    "capacity_utilization": 0.3992206632933757,
+    "schedule_delay_mean_s": -0.07955401150054775,
+    "delay_index": 0.03005856374807988,
+    "routes_served": 1.0,
+    "footfall_per_route": 1231.1771428571428,
+    "ped_to_rider_ratio": 1.0451149371658917,
+    "two_wheeler_share": 0.01204555456521937,
+    "crowd_density": 0.07593809523809525,
+    "crowd_pressure": 0.05821085979591837,
+    "neighbour_demand_ratio": 1.0,
+    "network_degree": 6.0
+  },
+  "ranges": {
+    "log_footfall": [
+      4.249882035109238,
+      9.275400185788543
+    ],
+    "morning_share": [
+      0.03156394888612462,
+      0.41277932589913113
+    ],
+    "midday_share": [
+      0.11478352411678251,
+      0.5588853064337032
+    ],
+    "afternoon_share": [
+      0.10823964973948859,
+      0.47993784242289417
+    ],
+    "evening_share": [
+      0.026568715329724487,
+      0.5492100555336065
+    ],
+    "night_share": [
+      0.022347873849320025,
+      0.5407536335731506
+    ],
+    "am_peak_ratio": [
+      0.03156394888612462,
+      0.41277932589913113
+    ],
+    "pm_peak_ratio": [
+      0.02702365920116967,
+      0.6281423542520276
+    ],
+    "peak_to_base": [
+      1.9639959722642915,
+      14.0
+    ],
+    "temporal_entropy": [
+      0.768652615135614,
+      0.9377858565360424
+    ],
+    "night_activity": [
+      0.033472803347280346,
+      0.5082508250825082
+    ],
+    "service_frequency": [
+      6.0,
+      46.31428571428572
+    ],
+    "weekend_ratio": [
+      0.09026825580986535,
+      2.341752416588712
+    ],
+    "daily_volatility": [
+      0.1163875496191807,
+      0.34881100725383196
+    ],
+    "morning_balance": [
+      -0.5317973940805937,
+      0.5638931803133966
+    ],
+    "dwell_mean_s": [
+      15.873333333333331,
+      70.03426623565005
+    ],
+    "dwell_per_boarding": [
+      0.29074805354993394,
+      7.977954292084725
+    ],
+    "speed_mean_kmh": [
+      8.86049255441008,
+      43.848969072164955
+    ],
+    "speed_consistency": [
+      0.8166092865949686,
+      0.9810177461833576
+    ],
+    "occupancy_mean": [
+      0.4214876033057851,
+      59.80538922155689
+    ],
+    "capacity_utilization": [
+      0.007024793388429752,
+      0.9967564870259481
+    ],
+    "schedule_delay_mean_s": [
+      -17.736842105263158,
+      15.063405797101451
+    ],
+    "delay_index": [
+      9.578544061303771e-06,
+      0.14780701754385964
+    ],
+    "routes_served": [
+      1.0,
+      5.0
+    ],
+    "footfall_per_route": [
+      34.54857142857143,
+      6000.0
+    ],
+    "ped_to_rider_ratio": [
+      0.3535183015233064,
+      6.811539162666343
+    ],
+    "two_wheeler_share": [
+      0.006185173158105862,
+      0.01755449273308031
+    ],
+    "crowd_density": [
+      0.0028535714285714284,
+      0.5915892857142856
+    ],
+    "crowd_pressure": [
+      8.234591836734692e-05,
+      3.0
+    ],
+    "neighbour_demand_ratio": [
+      0.05,
+      20.0
+    ],
+    "network_degree": [
+      1.0,
+      20.0
+    ]
+  },
+  "palette": [
+    "#5b8cff",
+    "#22c7a9",
+    "#f4a63a",
+    "#c86bfa",
+    "#ff6b81",
+    "#3ec1f3",
+    "#b6e05a",
+    "#ff9f5a",
+    "#8a93ff",
+    "#f45d9c"
+  ],
+  "trained_at": "2026-11-19T15:05:06.794473+00:00"
+}

@@ -1,0 +1,19 @@
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated data (rebuild with: python pipeline/run_pipeline.py)
+data/raw/
+data/processed/
+dataset.csv
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local tooling
+.npm-cli/
+*.log
+.DS_Store
